@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="news">
+            <!-- cabeçalho -->
+            <div class="container">
+                <img class="icon" src="style/img/open-book (1).png" alt="icone livro" />
+                <h1 class="news_title" id="formTitle"> My<span id="destaque">Audible</span>Books</h1>
+            </div>
+
+            <form action="" id="news__form" onsubmit="exibirDados(event)">
+                <div class="news_form-body">
+
+                    <label for="title">Título*</label>
+                    <input type="text" id="title" required>
+
+                    <label for="subtitle">Subtítulo</label>
+                    <input type="text" id="subtitle">
+
+                    <label for="author">Autor*</label>
+                    <input type="text" id="author" required>
+
+                    <label for="pages">Páginas</label>
+                    <input type="number" id="pages">
+
+                    <label for="date">Data de Publicação*</label>
+                    <input type="date" id="date" required>
+
+                    <label for="isbn">ISBN*</label>
+                    <input type="number" id="isbn" required>
+                </div>
+
+                <div class="news__form-group">
+                    <input type="submit" class="button__news__button" name="enviar" id="botaoDeEnviar"
+                        value="Adicionar Livro">
+                </div>
+
+                <div id="tabela_resposta">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Subtítulo</th>
+                                <th>Autor</th>
+                                <th>Páginas</th>
+                                <th>Data de Publicação</th>
+                                <th>ISBN</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resposta">
+
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script/scriptI.js"></script>
+</body>
+
+</html>
